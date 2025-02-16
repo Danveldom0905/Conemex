@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conemex </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="icon" href="icono.png" type="image/png">
+
+    <style>
+header {
+   background-image: url('logo.png'); /* Cambia 'ruta-de-tu-logo.png' por la ruta de tu archivo */
+background-repeat: no-repeat; /* Evita que el logo se repita */
+background-position: 100px 3px; /* Mueve el logo 10px desde la izquierda y 10px desde la parte superior */
+background-size: 130px; /* Ajusta el tamaño del logo (puedes usar porcentaje o píxeles) */
+}
+
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Beige claro */
+            color: #000000; /* Gris oscuro para el texto */
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #228b22; /* Marrón oscuro */
+            color: #ffffff; /* Blanco */
+            padding: 29px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+
+        /* Contenido principal */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+       
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+
+        section h2 {
+            color: black; /* Verde oliva */
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        .btn:hover {
+            background-color: #6B8E23; /* Verde más claro */
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #228b22; /* Marrón oscuro */
+            color: #ffffff; /* Blanco */
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+        .social-media-icons {
+    text-align: center;
+    padding: 20px;
+}
+.social-media-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+.social-media-icons a:hover {
+    color: #555;
+}
+
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Conemex</h1>
+        <p>Hamburguesas de carne de conejo, frescas y deliciosas.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bienvenidos a CONEMEX</h2>
+            <p>En CONEMEX, tradición, salud y exquisitez se unen para ofrecerte lo mejor de la carne de Xicotepec. Nuestra historia comenzó en el año 2024 como un proyecto académico, impulsado por la visión de nuestros apasionados socios locales. Su interés en la salud y el bienestar inspiró la creación de CONEMEX, un lugar donde la carne de conejo es la estrella indiscutible.
+                
+                Somos una distinguida empresa mexicana dedicada exclusivamente a la preparación y comercialización de exquisita carne de conejo estilo hamburguesera. Nuestra elección de utilizar esta carne se basa en su excepcional valor nutricional y su inigualable sabor.
+                
+                La inspiración detrás de nuestro proyecto surgió al observar la problemática de salud en Estados Unidos, donde el alto consumo de hamburguesas, debido al ritmo de vida cotidiano y la tradición, ha contribuido a problemas de salud como la diabetes, enfermedades cardiovasculares, obesidad, aumento del colesterol e inflamación crónica.
+                
+                En CONEMEX, nos hemos propuesto ofrecer una alternativa saludable y deliciosa. Con nuestra carne de conejo, buscamos no solo deleitar tu paladar, sino también contribuir a tu bienestar.
+            </p>
+        </section>
+
+        <section>
+            <h2>Nuestro Producto</h2>
+            <p>Nuestras hamburguesas están elaboradas con ingredientes frescos y naturales, combinando la suavidad de la carne de conejo con especias selectas para un sabor inigualable.</p>
+
+<div class="carousel">
+    <img src="hamburguesa1.jpg" alt="Hamburguesa de Carne de Conejo 1" class="active">
+    <img src="hamburguesa2.jpg" alt="Hamburguesa de Carne de Conejo 2">
+    <img src="hamburguesa3.png" alt="Hamburguesa de Carne de Conejo 3">
+    <img src="hamburguesa4.png" alt="Hamburguesa de Carne de Conejo 4">
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const totalImages = images.length;
+    
+        setInterval(() => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % totalImages;
+            images[currentImageIndex].classList.add('active');
+        }, 5000); // Cambia de imagen cada 5 segundos
+    </script>
+</div>
+        </section>
+
+        <section>
+            <h2>¡Visítanos!</h2>
+            <p>Ven y descubre por qué Conemex es la mejor opción para los amantes de las hamburguesas diferentes. ¡Te esperamos!</p>
+           
+            
+            
+        </section>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/share/15V75q7Wpx/" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/tu-perfil" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/comer__c?igsh=c3Bmemc5MnY2bWV5" class="fab fa-instagram"></a>
+            <a href="https://www.tiktok.com/@tu-perfil" class="fab fa-tiktok"></a> 
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Conemex. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
