@@ -11,24 +11,39 @@
         header {
             background-image: url('logo.png'); /* Cambia 'ruta-de-tu-logo.png' por la ruta de tu archivo */
             background-repeat: no-repeat; /* Evita que el logo se repita */
-            background-position: 200% 5%; /* Ajusta la posición del logo */
+            background-position: 500% 5%; /* Ajusta la posición del logo */
             background-size: 20%; /* Ajusta el tamaño del logo al 20% del contenedor */
         }
 
         /* Estilos generales */
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff; /* Beige claro */
-            color: #000000; /* Gris oscuro para el texto */
-        }
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc; /* Beige claro */
+    background-image: url('patron conejo.png'); /* Cambia 'patron_conejos.png' por la ruta de tu patrón de conejos */
+    background-repeat: repeat; /* Repite el patrón */
+    background-size: cover; /* Escala el patrón para que cubra toda la página */
+    color: #000000; /* Gris oscuro para el texto */
+    position: relative; /* Añade esta línea */
+}
+
+/* Capa de opacidad */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* Color blanco con opacidad del 60% */
+    z-index: -1; /* Manda la capa detrás del contenido */
+}
 
         /* Encabezado */
         header {
             background-color: #228b22; /* Verde oscuro */
             color: #ffffff; /* Blanco */
-            padding: 29px;
+            padding: 30px;
             text-align: center;
         }
 
@@ -111,14 +126,34 @@
 
         /* Consulta de medios para pantallas grandes (PC) */
         @media (min-width: 1024px) {
+            body {
+        background-size: 100%; /* Escala el patrón al 50% del tamaño original en pantallas pequeñas */
+    }
             header {
-                background-position: 100px 3px; /* Ajusta la posición del logo en pantallas grandes */
-                background-size: 130px; /* Tamaño específico para pantallas grandes */
+                background-position: 150px 15px; /* Ajusta la posición del logo en pantallas grandes */
+                background-size: 150px; /* Tamaño específico para pantallas grandes */
+            }
+            header h1 {
+                font-size: 4rem; /* Ajusta el tamaño de la letra del <h1> en pantallas pequeñas */
+                margin-top: 10px; /* Ajusta el margen superior a 10px en pantallas pequeñas */
+            }
+             header p {
+                font-size: 1.5rem; /* Ajusta el tamaño de la letra del <p> en pantallas pequeñas */
+                margin-top: 10px; /* Ajusta el margen superior a 10px en pantallas pequeñas */
+            }
+            section h2 {
+                font-size: 2rem; /* Ajusta el tamaño de la letra del <h2> en pantallas pequeñas */
+            }
+            main p{
+                font-size:1.3rem;
             }
         }
 
         /* Consulta de medios para pantallas pequeñas (teléfonos) */
         @media (max-width: 768px) {
+            body {
+        background-size: 100%; /* Escala el patrón al 50% del tamaño original en pantallas pequeñas */
+    }
             header {
                 background-position: 30px 5px; /* Ajusta la posición del logo en pantallas pequeñas */
                 background-size: 70px; /* Tamaño específico para pantallas pequeñas */
@@ -141,6 +176,7 @@
     </style>
 </head>
 <body>
+    <div class="overlay"></div> <!-- Añade esta línea -->
     <header>
         <h1>CONEMEX</h1>
         <p>Hamburguesas de carne de conejo, frescas y deliciosas.</p>
@@ -161,7 +197,7 @@
 
         <section>
             <h2>Nuestro Producto</h2>
-            <p>Nuestras hamburguesas están elaboradas con ingredientes frescos y naturales, combinando la suavidad de la carne de conejo con especias selectas para un sabor inigualable.</p>
+            <p>La carne de hamburguesa es un alimento elaborado a base de un 90% de carne de conejo y 10% de ingredientes; ofreciendo una opción diferente y saludable para la dieta de las personas aportando proteínas y vitamina B que benefician de manera directa a su salud. El producto es totalmente libre de conservadores artificiales y cualquier tipo de químico o sustancia que pudiese modificar sus propiedades organolépticas.</p>
 
             <div class="carousel">
                 <img src="hamburguesa1.jpg" alt="Hamburguesa de Carne de Conejo 1" class="active">
@@ -184,7 +220,7 @@
 
         <section>
             <h2>¡Visítanos!</h2>
-            <p>Ven y descubre por qué Conemex es la mejor opción para los amantes de las hamburguesas diferentes. ¡Te esperamos!</p>
+            <p>A trévete a probar algo diferente, ven y descubre por que conemex ofrece una opción diferente y saludable para los amantes de las hamburguesas diferentes ¡Te esperamos!</p>
         </section>
 
         <div class="social-media-icons">
