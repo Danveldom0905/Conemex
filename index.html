@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conemex </title>
+    <title>Conemex</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" href="icono.png" type="image/png">
 
     <style>
-header {
-   background-image: url('logo.png'); /* Cambia 'ruta-de-tu-logo.png' por la ruta de tu archivo */
-background-repeat: no-repeat; /* Evita que el logo se repita */
-background-position: 100px 3px; /* Mueve el logo 10px desde la izquierda y 10px desde la parte superior */
-background-size: 130px; /* Ajusta el tamaño del logo (puedes usar porcentaje o píxeles) */
-}
+        header {
+            background-image: url('logo.png'); /* Cambia 'ruta-de-tu-logo.png' por la ruta de tu archivo */
+            background-repeat: no-repeat; /* Evita que el logo se repita */
+            background-position: 200% 5%; /* Ajusta la posición del logo */
+            background-size: 20%; /* Ajusta el tamaño del logo al 20% del contenedor */
+        }
 
         /* Estilos generales */
         body {
@@ -26,7 +26,7 @@ background-size: 130px; /* Ajusta el tamaño del logo (puedes usar porcentaje o 
 
         /* Encabezado */
         header {
-            background-color: #228b22; /* Marrón oscuro */
+            background-color: #228b22; /* Verde oscuro */
             color: #ffffff; /* Blanco */
             padding: 29px;
             text-align: center;
@@ -49,7 +49,6 @@ background-size: 130px; /* Ajusta el tamaño del logo (puedes usar porcentaje o 
             margin: 0 auto;
         }
 
-       
         .carousel {
             position: relative;
             width: 100%;
@@ -57,10 +56,12 @@ background-size: 130px; /* Ajusta el tamaño del logo (puedes usar porcentaje o 
             margin: auto;
             overflow: hidden;
         }
+
         .carousel img {
             width: 100%;
             display: none;
         }
+
         .carousel img.active {
             display: block;
         }
@@ -81,36 +82,67 @@ background-size: 130px; /* Ajusta el tamaño del logo (puedes usar porcentaje o 
 
         /* Pie de página */
         footer {
-            background-color: #228b22; /* Marrón oscuro */
+            background-color: #228b22; /* Verde oscuro */
             color: #ffffff; /* Blanco */
             text-align: center;
             padding: 10px;
             margin-top: 30px;
         }
-        .social-media-icons {
-    text-align: center;
-    padding: 20px;
-}
-.social-media-icons a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-}
-.social-media-icons a:hover {
-    color: #555;
-}
 
+        .social-media-icons {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-media-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .social-media-icons a:hover {
+            color: #555;
+        }
 
         footer p {
             margin: 0;
         }
+
+        /* Consulta de medios para pantallas grandes (PC) */
+        @media (min-width: 1024px) {
+            header {
+                background-position: 100px 3px; /* Ajusta la posición del logo en pantallas grandes */
+                background-size: 130px; /* Tamaño específico para pantallas grandes */
+            }
+        }
+
+        /* Consulta de medios para pantallas pequeñas (teléfonos) */
+        @media (max-width: 768px) {
+            header {
+                background-position: 30px 5px; /* Ajusta la posición del logo en pantallas pequeñas */
+                background-size: 70px; /* Tamaño específico para pantallas pequeñas */
+            }
+               
+
+            header h1 {
+                font-size: 2rem; /* Ajusta el tamaño de la letra del <h1> en pantallas pequeñas */
+                margin-top: 10px; /* Ajusta el margen superior a 10px en pantallas pequeñas */
+            }
+             header p {
+                font-size: 1rem; /* Ajusta el tamaño de la letra del <p> en pantallas pequeñas */
+                margin-top: 10px; /* Ajusta el margen superior a 10px en pantallas pequeñas */
+            }
+            section h2 {
+                font-size: 1.5rem; /* Ajusta el tamaño de la letra del <h2> en pantallas pequeñas */
+            }
+        }     
+       
     </style>
 </head>
 <body>
-    
     <header>
-        <h1>Conemex</h1>
+        <h1>CONEMEX</h1>
         <p>Hamburguesas de carne de conejo, frescas y deliciosas.</p>
     </header>
 
@@ -131,37 +163,35 @@ background-size: 130px; /* Ajusta el tamaño del logo (puedes usar porcentaje o 
             <h2>Nuestro Producto</h2>
             <p>Nuestras hamburguesas están elaboradas con ingredientes frescos y naturales, combinando la suavidad de la carne de conejo con especias selectas para un sabor inigualable.</p>
 
-<div class="carousel">
-    <img src="hamburguesa1.jpg" alt="Hamburguesa de Carne de Conejo 1" class="active">
-    <img src="hamburguesa2.jpg" alt="Hamburguesa de Carne de Conejo 2">
-    <img src="hamburguesa3.png" alt="Hamburguesa de Carne de Conejo 3">
-    <img src="hamburguesa4.png" alt="Hamburguesa de Carne de Conejo 4">
-    <script>
-        let currentImageIndex = 0;
-        const images = document.querySelectorAll('.carousel img');
-        const totalImages = images.length;
-    
-        setInterval(() => {
-            images[currentImageIndex].classList.remove('active');
-            currentImageIndex = (currentImageIndex + 1) % totalImages;
-            images[currentImageIndex].classList.add('active');
-        }, 5000); // Cambia de imagen cada 5 segundos
-    </script>
-</div>
+            <div class="carousel">
+                <img src="hamburguesa1.jpg" alt="Hamburguesa de Carne de Conejo 1" class="active">
+                <img src="hamburguesa2.jpg" alt="Hamburguesa de Carne de Conejo 2">
+                <img src="hamburguesa3.png" alt="Hamburguesa de Carne de Conejo 3">
+                <img src="hamburguesa4.png" alt="Hamburguesa de Carne de Conejo 4">
+                <script>
+                    let currentImageIndex = 0;
+                    const images = document.querySelectorAll('.carousel img');
+                    const totalImages = images.length;
+
+                    setInterval(() => {
+                        images[currentImageIndex].classList.remove('active');
+                        currentImageIndex = (currentImageIndex + 1) % totalImages;
+                        images[currentImageIndex].classList.add('active');
+                    }, 5000); // Cambia de imagen cada 5 segundos
+                </script>
+            </div>
         </section>
 
         <section>
             <h2>¡Visítanos!</h2>
             <p>Ven y descubre por qué Conemex es la mejor opción para los amantes de las hamburguesas diferentes. ¡Te esperamos!</p>
-           
-            
-            
         </section>
+
         <div class="social-media-icons">
             <a href="https://www.facebook.com/share/15V75q7Wpx/" class="fab fa-facebook-f"></a>
-            <a href="https://twitter.com/tu-perfil" class="fab fa-twitter"></a>
+            <a href="https://x.com/ConemexS?t=jxV5NGPM-FZLJ571BIVsEw&s=09" class="fab fa-twitter"></a>
             <a href="https://www.instagram.com/comer__c?igsh=c3Bmemc5MnY2bWV5" class="fab fa-instagram"></a>
-            <a href="https://www.tiktok.com/@tu-perfil" class="fab fa-tiktok"></a> 
+            <a href="https://www.tiktok.com/@conemex_s.a.s?_t=ZM-8txE4Ugy005&_r=1" class="fab fa-tiktok"></a>
         </div>
     </main>
 
