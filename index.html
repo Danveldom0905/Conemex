@@ -200,10 +200,9 @@
             <p>La carne de hamburguesa es un alimento elaborado a base de un 90% de carne de conejo y 10% de ingredientes; ofreciendo una opción diferente y saludable para la dieta de las personas aportando proteínas y vitamina B que benefician de manera directa a su salud. El producto es totalmente libre de conservadores artificiales y cualquier tipo de químico o sustancia que pudiese modificar sus propiedades organolépticas.</p>
 
             <div class="carousel">
-                <img src="hamburguesa1.jpg" alt="Hamburguesa de Carne de Conejo 1" class="active">
-                <img src="hamburguesa2.jpg" alt="Hamburguesa de Carne de Conejo 2">
-                <img src="hamburguesa3.png" alt="Hamburguesa de Carne de Conejo 3">
-                <img src="hamburguesa4.png" alt="Hamburguesa de Carne de Conejo 4">
+                <img src="Imagen1.jpeg" alt="Hamburguesa de Carne de Conejo 1" class="active">
+                <img src="Imagen3.jpeg" alt="Hamburguesa de Carne de Conejo 3">
+                
                 <script>
                     let currentImageIndex = 0;
                     const images = document.querySelectorAll('.carousel img');
@@ -213,7 +212,7 @@
                         images[currentImageIndex].classList.remove('active');
                         currentImageIndex = (currentImageIndex + 1) % totalImages;
                         images[currentImageIndex].classList.add('active');
-                    }, 5000); // Cambia de imagen cada 5 segundos
+                    }, 10000); // Cambia de imagen cada 5 segundos
                 </script>
             </div>
         </section>
